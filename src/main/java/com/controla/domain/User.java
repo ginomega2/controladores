@@ -1,6 +1,9 @@
 package com.controla.domain;
 
+
 public class User {
+
+
     private String fullName;
     private int age;
     private boolean asegurado;
