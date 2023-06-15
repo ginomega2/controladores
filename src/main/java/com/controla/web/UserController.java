@@ -25,7 +25,7 @@ public class UserController {
     @RequestMapping("/{id}/invoices")        //****   http://localhost:8086/user/35/invoices?date=12/22/2023
 //    public String displayUserInvoices(@PathVariable String userId, @RequestParam Date date){    //  esta obligado a pasar el date en la ruta como un query ?
     public String displayUserInvoices(@PathVariable("id") String userId,
-                                      @RequestParam(value = "date", required = false) Date dateOrNull){    //   el date es opcional en la ruta como un query ?
+                                      @RequestParam(value = "date", required = true) Date dateOrNull){    //   el date es opcional en la ruta como un query ?
         // y se mantiene en la ruta con el nombre de date pero dentro del metodo usaremos otro nosmbre  dateOrNull  probar cambiar el nombre de date por fecha
         // y tambien el id po userId
         return "invoice found for user :"+userId+" on date: "+dateOrNull;
