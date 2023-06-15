@@ -12,7 +12,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class HomeController {
     public String msg="sin mensaje";
 
-    @RequestMapping("/menu")         //****   http://localhost:8086/menu
+    @RequestMapping("/menu")           //****   http://localhost:8086/menu
     public String menu(Model model){
 
         User user = new User("hecho en menu",46,true,"Masculino");
