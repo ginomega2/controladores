@@ -13,7 +13,14 @@ public class HomeController {
     public String msg="sin mensaje";
 
     @RequestMapping("/menu")         //****   http://localhost:8086/menu
-    public String menu(){
+    public String menu(Model model){
+
+        User user = new User("hecho en menu",46,true,"Masculino");
+        User user2 = new User();
+        model.addAttribute("formData",user2);  //Agregamos un espacio de tipo User
+        // para almacenar los datos en el formulario usaremos ese nombre en el formulario
+        msg="mnesaje enviado desde metodo menu en   http://localhost:8086/menu ";
+        model.addAttribute("msg",msg);
         return "menu";
     }
 

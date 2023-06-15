@@ -42,6 +42,69 @@
 
 <H1>MUESTRA DE USO DE BOOTSTRAP</H1>
 
+<!--  <form action="/create" method="post"  th:object="${formData}">-->
+<!--  <div class="form-group">-->
+<!--    <label for="exampleInputEmail1">Email address</label>-->
+<!--    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">-->
+<!--    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+<!--  </div>-->
+<!--  <div class="form-group">-->
+<!--    <label for="exampleInputPassword1">Password</label>-->
+<!--    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">-->
+<!--  </div>-->
+<!--  <div class="form-check">-->
+<!--    <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
+<!--    <label class="form-check-label" for="exampleCheck1">Check me out</label>-->
+<!--  </div>-->
+<!--  <button type="submit" class="btn btn-primary">Submit</button>-->
+<!--</form>-->
+
+<div class="jumbotron">
+  <h1 class="display-4">Hola, Silver !</h1>
+  <p class="lead">Este es un ejemplo de uso del framework bootstrap para html es muy sencillo aplicar estilos este cuadro se llama jumbotron</p>
+  <hr class="my-4">
+  <p> usa  utileria de clases para tipografia espaciado colores etc.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">boton de muestra   </a>
+  </p>
+<p>
+  <form action="/create" method="post"  th:object="${formData}">
+    <!--<form action="/crea1" method="post"  th:object="${formData}">-->
+
+
+
+    NOMBRE   <input class="form-control form-control-lg" type="text" placeholder="introduce el nombre"  th:field="${formData.fullName}" >
+    EDAD   <input class="form-control form-control-lg" type="text"   th:field="${formData.age}" >
+
+
+    <!--  Asegurado  <input class="form-check-input" type="checkbox" value="true"  th:field="${formData.asegurado}">-->
+    <p>Asegurado <input type="checkbox" th:field="${formData.asegurado}" th:value="true" /></p>
+    <p>Genero</p>
+    <p>Masculino: <input type="radio" th:field="${formData.genero}" th:value="Masculino" />
+      Femenino: <input type="radio" th:field="${formData.genero}" th:value="Femenino" />
+    </p>
+    <p><input class="btn btn-primary" type="submit" value="Submit"> <input class="btn btn-danger" type="reset" value="Reset"></p>
+
+    <b th:text="${msg}"></b>
+    <a href="/pages">LINK A OTRA PAGINA</a>
+
+
+  </form>
+  </p>
+</div>
+
 
 
 </html>
+
+
+<!--<button type="button" class="btn btn-primary">Primary</button>-->
+<!--<button type="button" class="btn btn-secondary">Secondary</button>-->
+<!--<button type="button" class="btn btn-success">Success</button>-->
+<!--<button type="button" class="btn btn-danger">Danger</button>-->
+<!--<button type="button" class="btn btn-warning">Warning</button>-->
+<!--<button type="button" class="btn btn-info">Info</button>-->
+<!--<button type="button" class="btn btn-light">Light</button>-->
+<!--<button type="button" class="btn btn-dark">Dark</button>-->
+
+<!--<button type="button" class="btn btn-link">Link</button>-->
